@@ -1,0 +1,30 @@
+<h1>Edit car</h1>
+
+<%= form_with model: @car do |f| %>
+	<div>
+		<%= f.label "Марка" %>
+		<%= f.text_field :make, required: true, placeholder: "Марка" %>
+	</div>
+
+	<div>
+		<%= f.label "Модель" %>
+		<%= f.text_field :mode, required: true, placeholder: "Модель" %>
+	</div>
+
+	<div>
+		<%= f.label "Год" %>
+		<%= f.text_field :year, required: true, placeholder: "Год" %>
+	</div>
+	
+	<div>
+		<%= f.label "Цена" %>
+		<%= f.text_field :price, required: true, placeholder: "Цена" %>
+	</div>
+
+	<div>
+		<%= f.label "Фото" %>
+		<%= f.file_field :image %>
+	</div>
+
+	<%= f.submit "Обновить объявление" %>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Cars</h1>
+
+<% @cars.each do |car| %>
+	<div class="card mb-3" style="max-width: 540px;">
+		<div class="row g-0">
+			<div class="col-md-4">
+				<%# <img src="..." class="img-fluid rounded-start" alt="..."> %>
+			</div>
+			<div class="col-md-8">
+				<div class="card-body">
+					<h5 class="card-title"><%= car.make %> <%= car.mode %></h5>
+					<p class="card-text"><%= car.year %></p>
+					<p class="card-text"><%= car.price %></p>
+					<%= link_to 'Show', car_path(car) %>
+					<%= link_to 'Edit', edit_car_path(car) %>
+					<%= link_to 'Destroy', car_path(car), data: {method: :delete, confirm: "Are you sure?"} %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
