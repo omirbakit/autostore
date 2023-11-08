@@ -1,6 +1,8 @@
 class CarsController < ApplicationController
 	def destroy
 		@car = Car.find_by id: params[:id]
+		@car.destroy
+		redirect_to cars_path
 	end
 
 	def edit
