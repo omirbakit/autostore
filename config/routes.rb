@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :cars, only: %i[index new create show edit update destroy]
 
   # get '/cars', to: 'cars#index'

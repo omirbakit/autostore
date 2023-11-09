@@ -11,15 +11,18 @@
   </head>
 
   <body>
-    <header class="p-3 bg-info">
+    <header class="p-1 bg-info">
       <div class="container">
         <nav class="navbar navbar-expand-lg" >
           <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav" >
+            <div class="d-flex collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav p-2" >
                 <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
                 <li><%= link_to 'Cars', cars_path, class: 'navbar-brand' %></li>
                 <li><%= link_to 'Add car', new_car_path, class: 'navbar-brand' %></li>
+              </ul>
+              <ul class="navbar-nav ms-auto p-2">
+                <li><%= link_to 'Sign up', new_user_registration_path, class: 'navbar-brand' %></li>
               </ul>
             </div>
           </div>
