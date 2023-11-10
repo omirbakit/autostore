@@ -13,16 +13,17 @@
   <body>
     <header class="p-1 bg-info">
       <div class="container">
-        <nav class="navbar navbar-expand-lg" >
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <div class="d-flex collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav p-2" >
-                <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
-                <li><%= link_to 'Cars', cars_path, class: 'navbar-brand' %></li>
-                <li><%= link_to 'Add car', new_car_path, class: 'navbar-brand' %></li>
+                <li><%= link_to 'Home', root_path, class: 'btn btn-info fs-4' %></li>
+                <li><%= link_to 'Cars', cars_path, class: 'btn btn-info fs-4' %></li>
+                <li><%= link_to 'Add car', new_car_path, class: 'btn btn-info fs-4' %></li>
               </ul>
               <ul class="navbar-nav ms-auto p-2">
-                <li><%= link_to 'Sign up', new_user_registration_path, class: 'navbar-brand' %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-info fs-4' %></li>
+                <li><%= link_to 'Log in', new_user_session_path, class: 'btn btn-info fs-4' %></li>
               </ul>
             </div>
           </div>
