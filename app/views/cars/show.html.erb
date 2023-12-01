@@ -9,6 +9,8 @@
 					<h5 class="card-title"><%= @car.make %> <%= @car.mode %></h5>
 					<p class="card-text"><%= @car.year %></p>
 					<p class="card-text"><%= @car.price %></p>
+					<%= link_to 'Edit', edit_car_path(@car) %>
+					<%= link_to 'Destroy', car_path(@car), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 				</div>
 			</div>
 		</div>

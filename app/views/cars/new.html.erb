@@ -1,19 +1,11 @@
 <div class="container py-5" style="max-width: 540px">
 	<h1>New Car</h1>
 
-	<%= form_with model: @car do |f| %>
+	<%= form_with model: Car.new do |f| %>
 
 		<div>
 		  <%= f.label "Марка", class: "form-label" %>
-			<select class="form-select mb-3" aria-label="Large select example">
-				
-				<%# <%= f.text_field :make, required: true, class: "form-control" %> %>
-				<option selected></option>
-				<option value="1">Toyota</option>
-				<option value="2">Hyundai</option>
-				<option value="3">Kia</option>
-				<option value="4">Nissan</option>
-			</select>
+			<%= f.text_field :make, required: true, class: "form-control" %>
 		</div>
 
 
