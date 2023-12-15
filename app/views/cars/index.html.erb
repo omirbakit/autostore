@@ -2,6 +2,7 @@
 
 <% @cars.each do |car| %>
 	<div class="card mb-3" style="max-width: 700px;">
+	<%= link_to car_path(car) do %>	
 		<div class="row g-0">
 			<div class="mt-4 mb-4 col-md-4">
 				<%# <img src="..." class="img-fluid rounded-start" alt="..."> %>
@@ -10,9 +11,6 @@
 			<div class="col-md-4">
 				<div class="card-body">
 					<h5 class="card-title"><%= car.make %> <%= car.mode %>, <%= car.year %></h5>
-					<%= link_to 'Show', car_path(car) %>
-					<%= link_to 'Edit', edit_car_path(car) %>
-					<%= link_to 'Destroy', car_path(car), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -21,5 +19,6 @@
 				</div>
 			</div>
 		</div>
+	<% end %>
 	</div>
 <% end %>
